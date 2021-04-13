@@ -1,0 +1,24 @@
+.navbar {
+  opacity: 0.9;
+}
+
+#header-section .header-inner {
+  padding-top: 160px;
+  padding-bottom: 120px;
+}
+
+#explore-section{
+  padding-top: 120px;
+}
+
+#create-section{
+  padding-top: 120px;
+}
+
+#contactUs-section{
+  padding-top: 120px;
+}
+
+#contactUs-section .container{
+  border-radius: 8px;
+}
