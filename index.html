@@ -21,15 +21,19 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
+              <li class="nav-item me-3">
                 <a class="nav-link" href="#explore-section">Explore</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item me-3">
                 <a class="nav-link" href="#create-section">Create</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contactUs-section">Contact Us</a>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="#contactUs-section">Contact Us Modal</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#calculatorProject-section">Calculator Project</a>
+              </li>
+
             </ul>
           </div>
         </div>
@@ -137,9 +141,9 @@
         <div class="container bg-dark text-white">
             <div class="row">
                 <div class="col text-center p-5">
-                    <h1 class="display4 mb-3">Contact Us</h1>
-                    <p class="mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quas recusandae et eveniet, doloremque tenetur exercitationem. Doloribus obcaecati neque aperiam perspiciatis architecto voluptate pariatur nisi, reprehenderit, totam, quo aut iure.
-                    Labore odio iste repudiandae repellendus et sunt distinctio impedit mollitia atque eaque maiores totam, repellat officiis ipsum veritatis id nesciunt doloremque praesentium optio velit neque eum fugiat.</p>
+                    <h1 class="display4 mb-3">Contact Us Modal</h1>
+                    <p class="mb-3">Click the button below, the modal will open on the screen! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quas recusandae et eveniet, doloremque tenetur exercitationem. Doloribus obcaecati neque aperiam perspiciatis architecto voluptate pariatur nisi, reprehenderit, totam, quo aut iure.
+                    Labore odio iste repudiandae repellendus et sunt distinctio impedit mollitia atque eaque maiores totam.</p>
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactUsModal">
                      Contact Us
                     </button>
@@ -180,9 +184,70 @@
     </div>
  </div>
 
+    <!--CALCULATOR PROJECT SECTION-->
+    <section id="calculatorProject-section">
+        <div class="bg-secondary text-white section-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h1 class="display4 text-center">Tip Calculator</h1>
+                    </div>
+                </div>
+        
+                <div class="input-group row mt-5">
+                    <label for="billAmount" class="col-sm-3 col-form-label text-end">Bill Amount (in dollars)</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" step="0.01" id="billAmount" min="0" placeholder="ie. 100">
+                    </div>
+                </div>
+        
+                <div class="input-group row mt-3">
+                    <label for="tipAmount" class="col-sm-3 col-form-label text-end">Tip amount (as a %)</label>
+                    <div class="col-sm-9">
+                        <input type="number" class="form-control" step="1" min="0" max="100" id="tipAmount" placeholder="ie. 25">
+                    </div>
+                </div>
+        
+                <div class="input-group row mt-3">
+                    <div class="col-sm-3 col-form-label"></div>
+                    <div class="col-sm-9">
+                        <button class="btn btn-primary" onClick="calculate()">Calculate</button>
+                    </div>
+                </div>
+        
+                <div class="input-group row mt-3">
+                    <div class="col-sm-3 col-form-label"></div>
+                    <div class="col-sm-9">
+                        <div class="mt-3 tip-amount"></div>
+                        <div class="mt-3 bill-amount"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function calculate() {
+        var billAmount = Number(document.getElementById("billAmount").value) //set the billAmount
+        var tipAmount = document.getElementById("tipAmount")  //set the tipAmout
+            tipAmount = Number(tipAmount.value)
+            tipAmount = tipAmount / 100 //for example 9->0.09
+        
+        var totalTip = billAmount * tipAmount
+        var tipHtml = "<h5> Total tip: $ " +totalTip+ "</h5>"
+        document.querySelector(".tip-amount").innerHTML = tipHtml
+
+        var totalBill = billAmount + totalTip
+        var billHtml = "<h5>Total bill: $ " +totalBill+ "</h5>"
+        document.querySelector(".bill-amount").innerHTML = billHtml
+
+        }
+    </script>
+
+
 
  <!--FOOTER-->
- <div class="mt-5 mb-2">
+ <div class="my-3">
      <p style="text-align: center"> &copy; <script>document.write(new Date().getFullYear())</script> Jesse Ye</p>
  </div>
 

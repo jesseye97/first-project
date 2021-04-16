@@ -21,6 +21,12 @@ body{
 
 #contactUs-section{
   padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+#calculatorProject-section .section-inner{
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 #contactUs-section .container{
