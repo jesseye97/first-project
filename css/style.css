@@ -1,34 +1,39 @@
-body{
-  font-family: 'Raleway', sans-serif;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .navbar {
   opacity: 0.9;
 }
 
-#header-section .header-inner {
-  padding-top: 160px;
-  padding-bottom: 120px;
+.header {
+  padding: 120px 0px;
 }
 
-#explore-section{
-  padding-top: 120px;
+.gradient-animation {
+  background:linear-gradient(to left, #1e5799, #2ce0bf, #76dd2c, #dba62b, #e02cbf, #1e5799);
+  color: transparent;
+  background-size: 1000px 100%;
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text;
+  animation: gradient 150s infinite;
 }
 
-#create-section{
-  padding-top: 120px;
+@keyframes gradient {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 10000px;
+  }
 }
 
-#contactUs-section{
-  padding-top: 120px;
-  padding-bottom: 120px;
+.work .row {
+  align-items: center;
+  margin-bottom: 120px;
 }
 
-#calculatorProject-section .section-inner{
-  padding-top: 120px;
-  padding-bottom: 120px;
+.text-link {
+  text-decoration: none;
 }
 
-#contactUs-section .container{
-  border-radius: 8px;
-}
