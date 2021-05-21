@@ -65,7 +65,7 @@
 
         <div class="row position-relative pb-lg-5">
             <div class="col-lg-5">
-                <img src="img/section1.png" class="img-fluid rounded-3">
+                <img src="img/thumbnail-1.png" alt="image of the web-based DevOps tool" class="img-fluid rounded-3 parallax">
             </div>
             <div class="col-lg-7">
                 <div class="mx-lg-3 mt-4"> 
@@ -78,7 +78,7 @@
 
         <div class="row position-relative pb-lg-5">
           <div class="col-lg-5 order-lg-2">
-              <img src="img/section1.png" class="img-fluid rounded-3">
+              <img src="img/thumbnail-2.png" alt="image of the Web-based display software" class="img-fluid rounded-3 parallax">
           </div>
           <div class="col-lg-7">
               <div class="mx-lg-3 mt-4 order-lg-1 text-lg-end"> 
@@ -91,7 +91,7 @@
 
         <div class="row position-relative pb-lg-5">
           <div class="col-lg-5">
-              <img src="img/section1.png" class="img-fluid rounded-3">
+              <img src="img/thumbnail-3.png" alt="image of the SaaS Website" class="img-fluid rounded-3 parallax">
           </div>
           <div class="col-lg-7">
               <div class="mx-lg-3 mt-4"> 
@@ -104,7 +104,7 @@
 
       <div class="row position-relative pb-lg-5">
         <div class="col-lg-5 order-lg-2">
-            <img src="img/thumbnail-4.png" class="img-fluid rounded-3">
+            <img src="img/thumbnail-4.png" alt="image of the Order Management Platform" class="img-fluid rounded-3 parallax">
         </div>
         <div class="col-lg-7">
             <div class="mx-lg-3 mt-4 order-lg-1 text-lg-end"> 
@@ -117,7 +117,7 @@
 
       <div class="row position-relative pb-lg-5">
         <div class="col-lg-5">
-            <img src="img/thumbnail-5.png" class="img-fluid rounded-3">
+            <img src="img/thumbnail-5.png" alt="image of the Online Course Platform" class="img-fluid rounded-3 parallax">
         </div>
         <div class="col-lg-7">
             <div class="mx-lg-3 mt-4"> 
@@ -127,12 +127,6 @@
             </div>
         </div>
     </div>
-
-      
-
-
-       
-    
     </section>
 
  <!--FOOTER-->
@@ -152,6 +146,16 @@
    </div>
 </footer>
 
+
+ <script src="simpleParallax.js"></script>
+ <script type="text/javascript">
+  if (window.innerWidth > 600) {
+    var image = document.getElementsByClassName('parallax');
+    new simpleParallax(image, {
+      overflow: true
+    });
+  }
+ </script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>
