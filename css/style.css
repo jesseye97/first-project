@@ -13,7 +13,7 @@
   background-size: 1000px 100%;
   -webkit-text-fill-color: transparent; 
   -webkit-background-clip: text;
-  animation: gradient 150s infinite;
+  animation: gradient 120s infinite;
 }
 
 @keyframes gradient {
