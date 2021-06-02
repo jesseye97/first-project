@@ -38,4 +38,61 @@
   align-items: center;
 }
 
+.load-animation {
+  animation-duration: 2s;
+  animation-name: load;
+  position: relative;
+}
 
+@keyframes load {
+  0% {
+    top: 100px;
+    opacity: 0;
+  }
+  100% { 
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+
+.img-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+
+.row-align {
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  position: relative;
+  left: 0px;
+}
+
+.row-animation {
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-name: row;
+}
+
+@keyframes row {
+  0% {
+    left: 0px;
+  }
+  100% { 
+    left: -2500px;
+  }
+}
+
+.img-size {
+height: 400px;
+width: 400px;
+flex: 0 0 auto;
+box-shadow: rgb(0 0 0) 0px 0px 20px;
+}
